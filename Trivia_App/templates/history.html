@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+{% load my_tags %}
+{% for data in result %}
+{% if forloop.counter|modulo:2 == 1 %}
+<h4>GAME 1 : {{data.time }} </h4>
+<h4>Name : {{data.name }} </h4>
+{% endif %}
+
+{{data.question }}<br>
+{{data.option }}<br>
+
+<br>
+<br>
+{% endfor %}
+
+
+<a href="/" class="btn btn-success">Back To Home</a>
+{% endblock %}

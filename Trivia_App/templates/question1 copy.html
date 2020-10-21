@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<script>
+    var counter = 0;
+</script>
+<h1>
+    <form method="POST">
+        <h1>Question 1 : </h1>
+
+        {% csrf_token %}
+        <h1>Who is the best cricketer in the world?</h1>
+        <input type="hidden" value="Who is the best cricketer in the world?" name='question'>
+        <input type='radio' name='option' value='sachin tendulkar'> A)Sachin tendulkar<br>
+        <input type='radio' name='option' value='Virat Kohli'>B) Virat Kohli<br>
+        <input type='radio' name='option' value='adam gilchrist'>C) adam gilchrist<br>
+        <input type='radio' name='option' value='jack kallis'>D) jack kallis<br>
+
+        <input type="submit" class="btn btn-warning" value="next">
+    </form>
+</h1>
+{% endblock %}

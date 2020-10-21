@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<form method="POST">
+    {% csrf_token %}
+    <h1>Quiz Finished </h1><br>
+
+    <!-- <a href="history.html" class="btn btn-success">History</a> -->
+    <input type="submit" class="btn btn-primary" value="Finish">
+    <input type="submit" class="btn btn-warning" value="History">
+</form>
+{% endblock %}

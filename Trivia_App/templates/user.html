@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body_block %}
+<form method="POST">
+    <h1>Quiz</h1><br>
+    {% csrf_token %}
+    {{form.as_p}}
+    <br>
+
+    <input type="submit" class="btn btn-primary" value="Next">
+</form>
+{% endblock %}
