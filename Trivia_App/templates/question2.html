@@ -10,10 +10,14 @@
         {% csrf_token %}
         <h1>What are the colors in indian national flag?</h1>
         <input type="hidden" value="What are the colors in indian national flag?" name='question'>
-        <input type='checkbox' name='option1' value='White'>A) White<br>
-        <input type='checkbox' name='option2' value='Green'>B) Green<br>
-        <input type='checkbox' name='option3' value='Yellow'>C) Yellow<br>
-        <input type='checkbox' name='option4' value='Orange'>D) Orange<br>
+        <input type='checkbox' name='option1' value='White' style="height:35px; width:20px; vertical-align: middle;">
+        A)White<br>
+        <input type='checkbox' name='option2' value='Green' style="height:35px; width:20px; vertical-align: middle;">
+        B)Green<br>
+        <input type='checkbox' name='option3' value='Yellow' style="height:35px; width:20px; vertical-align: middle;">
+        C)Yellow<br>
+        <input type='checkbox' name='option4' value='Orange' style="height:35px; width:20px; vertical-align: middle;">
+        D)Orange<br>
 
         <input type="submit" class="btn btn-warning" value="next">
     </form>
