@@ -22,6 +22,7 @@ urlpatterns = [
     path('question1/', views.question1, name='Question1'),
     path('question2/', views.question2, name='Question2'),
     path('history/', views.history, name='History'),
+    path('summery/', views.summery, name='Summery'),
     # path('last/', views.last, name='Last'),
 
 ]

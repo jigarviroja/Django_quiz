@@ -104,7 +104,7 @@ def question2(request):
         FinalResult.objects.create(
             name=name, question=question, option=ls, time=date)
 
-        return redirect('History')
+        return redirect('Summery')
 
 
 # def last(request):
@@ -112,6 +112,11 @@ def question2(request):
 
 #     if request.method == 'POST':
 #         return redirect(request, "History")
+
+
+def summery(request):
+    result = FinalResult.objects.filter(name=request.session['username'])
+    return render(request, 'summery.html', {'result': result})
 
 
 def history(request):
