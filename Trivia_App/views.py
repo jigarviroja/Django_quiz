@@ -115,7 +115,8 @@ def question2(request):
 
 
 def summery(request):
-    result = FinalResult.objects.filter(name=request.session['username'])
+    result = FinalResult.objects.filter(
+        name=request.session['username'])
     return render(request, 'summery.html', {'result': result})
 
 
