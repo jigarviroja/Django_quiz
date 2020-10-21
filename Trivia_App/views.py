@@ -116,7 +116,7 @@ def question2(request):
 
 def summery(request):
     result = FinalResult.objects.filter(
-        name=request.session['username'])
+        name=request.session['username']).order_by('-time')[:2]
     return render(request, 'summery.html', {'result': result})
 
 
